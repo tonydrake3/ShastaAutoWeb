@@ -103,6 +103,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectNavigation.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Projects\ProjectSwitch.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectSwitch.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\UserLogin.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,6 +140,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\Login\InvalidthenValidLoginSteps.cs" />
     <Compile Include="Steps\Login\PasswordEncryptionSteps.cs" />
+    <Compile Include="Steps\Projects\Filter By\ProjectNavigationSteps.cs" />
     <Compile Include="Steps\Projects\Filter By\StatusSteps.cs" />
     <Compile Include="Steps\Projects\Project Summary\ProjectManagementMenuDropdownSteps.cs" />
   </ItemGroup>
@@ -179,6 +185,10 @@
     <None Include="Features\Projects\ProjectNavigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ProjectNavigation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Projects\ProjectSwitch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProjectSwitch.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\UserLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

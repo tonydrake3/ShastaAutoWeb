@@ -18,20 +18,21 @@ namespace eSUBTests.Features.Projects
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ProjectNavigation")]
-    public partial class ProjectNavigationFeature
+    [NUnit.Framework.DescriptionAttribute("ProjectSwitch")]
+    public partial class ProjectSwitchFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ProjectNavigation.feature"
+#line 1 "ProjectSwitch.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ProjectNavigation", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ProjectSwitch", "\tAs a Project Manager User, I would like to switch Projects\r\n\tWithout leaving the" +
+                    " Project Management Module", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,21 +65,22 @@ namespace eSUBTests.Features.Projects
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("ProjectNavigation")]
-        [NUnit.Framework.CategoryAttribute("Project")]
-        [NUnit.Framework.CategoryAttribute("FunctionalTests")]
-        public virtual void ProjectNavigation()
+        [NUnit.Framework.DescriptionAttribute("Switch Projects Without Leaving Project Manager Module")]
+        [NUnit.Framework.CategoryAttribute("Projects")]
+        [NUnit.Framework.CategoryAttribute("Functional")]
+        public virtual void SwitchProjectsWithoutLeavingProjectManagerModule()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ProjectNavigation", new string[] {
-                        "Project",
-                        "FunctionalTests"});
-#line 7
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Switch Projects Without Leaving Project Manager Module", new string[] {
+                        "Projects",
+                        "Functional"});
 #line 9
-testRunner.Given("the user has selected a project, the side menu should display the text \'Change Pr" +
-                    "oject\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.Then("the user clicks on \'Change Project\' and the text \'Select Project\' should display", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("a user has a selected project,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 11
+ testRunner.When("the Left Sidebar is displayed,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.Then("the Left Sidebar shall contain a Change Project menu item.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

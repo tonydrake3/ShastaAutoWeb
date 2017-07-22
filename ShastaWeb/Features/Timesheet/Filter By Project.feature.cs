@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace eSUBTests.Features.Projects
+namespace eSUBTests.Features.Timesheet
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace eSUBTests.Features.Projects
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ProjectNavigation")]
-    public partial class ProjectNavigationFeature
+    [NUnit.Framework.DescriptionAttribute("Filter By Project")]
+    public partial class FilterByProjectFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ProjectNavigation.feature"
+#line 1 "Filter By Project.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ProjectNavigation", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Filter By Project", "\tTo filter by Time or Employee\r\n\tTo begin, we\'ll fitler by Time", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,21 +64,27 @@ namespace eSUBTests.Features.Projects
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("ProjectNavigation")]
-        [NUnit.Framework.CategoryAttribute("Project")]
+        [NUnit.Framework.DescriptionAttribute("Filter By Time")]
+        [NUnit.Framework.CategoryAttribute("FilterByTime")]
         [NUnit.Framework.CategoryAttribute("FunctionalTests")]
-        public virtual void ProjectNavigation()
+        public virtual void FilterByTime()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ProjectNavigation", new string[] {
-                        "Project",
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter By Time", new string[] {
+                        "FilterByTime",
                         "FunctionalTests"});
-#line 7
+#line 8
 this.ScenarioSetup(scenarioInfo);
-#line 9
-testRunner.Given("the user has selected a project, the side menu should display the text \'Change Pr" +
-                    "oject\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
-testRunner.Then("the user clicks on \'Change Project\' and the text \'Select Project\' should display", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("a Project Manager is logged into Shasta,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 11
+ testRunner.And("the Time & Expense left sidebar menu is expanded by clicking on the dropdown,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.When("a Project Manager selects the Employee filter,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.Then("the Timesheets view is displayed,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.And("the Timesheets view shall contain Timecards with hours associated with the select" +
+                    "ed Employee.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
