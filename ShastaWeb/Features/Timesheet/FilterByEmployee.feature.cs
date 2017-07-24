@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace eSUBTests.Features
+namespace eSUBTests.Features.Timesheet
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace eSUBTests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("eSubSearch")]
-    public partial class ESubSearchFeature
+    [NUnit.Framework.DescriptionAttribute("Filter By Project")]
+    public partial class FilterByProjectFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "eSubSearch.feature"
+#line 1 "FilterByEmployee.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "eSubSearch", "\tto search for eSub via google", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Filter By Project", "\tTo filter by Project or Employee\r\n\tTo begin, we\'ll fitler by Employee", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,30 +64,28 @@ namespace eSUBTests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("eSUB Search")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
-        public virtual void ESUBSearch()
+        [NUnit.Framework.DescriptionAttribute("Filter By Employee")]
+        [NUnit.Framework.CategoryAttribute("FilterByTime")]
+        [NUnit.Framework.CategoryAttribute("FunctionalTests")]
+        public virtual void FilterByEmployee()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eSUB Search", new string[] {
-                        "SmokeTest"});
-#line 7
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter By Employee", new string[] {
+                        "FilterByTime",
+                        "FunctionalTests"});
 #line 8
- testRunner.Given("I have navigated to google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "keyword"});
-            table1.AddRow(new string[] {
-                        "eSub"});
+this.ScenarioSetup(scenarioInfo);
 #line 10
- testRunner.When("I enter the keyword", ((string)(null)), table1, "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "keyword"});
-            table2.AddRow(new string[] {
-                        "eSub"});
+ testRunner.Given("the Project Manager is logged into Shasta,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 11
+ testRunner.When("the Project Manager expands the Time & Expense option on the left sidebar menu by" +
+                    " clicking on the dropdown icon,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.Then("selects the Employee filter in the upper right corner,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 13
- testRunner.Then("i should see the following keyword", ((string)(null)), table2, "Then ");
+ testRunner.Then("the Timesheets view is displayed via the employee,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.And("the Timesheets view shall contain Timecards with hours associated with the select" +
+                    "ed Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -108,6 +108,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectSwitch.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\TimeFilter.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeFilter.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Timesheet\Filter By Project.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filter By Project.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\UserLogin.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,6 +199,14 @@
     <None Include="Features\Projects\ProjectSwitch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ProjectSwitch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TimeFilter.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TimeFilter.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Timesheet\Filter By Project.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Filter By Project.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\UserLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

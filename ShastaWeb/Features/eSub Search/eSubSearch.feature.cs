@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace eSUBTests.Features.Timesheet
+namespace eSUBTests.Features.ESubSearch
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace eSUBTests.Features.Timesheet
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Filter By Project")]
-    public partial class FilterByProjectFeature
+    [NUnit.Framework.DescriptionAttribute("eSubSearch")]
+    public partial class ESubSearchFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Filter By Project.feature"
+#line 1 "eSubSearch.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Filter By Project", "\tTo filter by Time or Employee\r\n\tTo begin, we\'ll fitler by Time", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "eSubSearch", "\tto search for eSub via google", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,27 +64,30 @@ namespace eSUBTests.Features.Timesheet
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Filter By Time")]
-        [NUnit.Framework.CategoryAttribute("FilterByTime")]
-        [NUnit.Framework.CategoryAttribute("FunctionalTests")]
-        public virtual void FilterByTime()
+        [NUnit.Framework.DescriptionAttribute("eSUB Search")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
+        public virtual void ESUBSearch()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter By Time", new string[] {
-                        "FilterByTime",
-                        "FunctionalTests"});
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("eSUB Search", new string[] {
+                        "SmokeTest"});
+#line 7
 this.ScenarioSetup(scenarioInfo);
+#line 8
+ testRunner.Given("I have navigated to google.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "keyword"});
+            table1.AddRow(new string[] {
+                        "eSub"});
 #line 10
- testRunner.Given("a Project Manager is logged into Shasta,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
- testRunner.And("the Time & Expense left sidebar menu is expanded by clicking on the dropdown,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
- testRunner.When("a Project Manager selects the Employee filter,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter the keyword", ((string)(null)), table1, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "keyword"});
+            table2.AddRow(new string[] {
+                        "eSub"});
 #line 13
- testRunner.Then("the Timesheets view is displayed,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
- testRunner.And("the Timesheets view shall contain Timecards with hours associated with the select" +
-                    "ed Employee.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("i should see the following keyword", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
