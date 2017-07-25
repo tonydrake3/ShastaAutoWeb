@@ -108,21 +108,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectSwitch.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\TimeFilter.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TimeFilter.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\Timesheet\Filter By Project.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Filter By Project.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\UserLogin.feature.cs">
+    <Compile Include="Features\Login\UserLogin.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserLogin.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Timesheet\FilterByEmployee.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilterByEmployee.feature</DependentUpon>
+    </Compile>
+    <Compile Include="FilterByEmployeeSteps.cs" />
     <Compile Include="Helpers\BrowserContext.cs" />
     <Compile Include="LoginSuccessSteps.cs" />
     <Compile Include="ProjectNavigationSteps.cs" />
@@ -142,7 +138,7 @@
     <Compile Include="Steps\Login\IncorrectPasswordSteps.cs" />
     <Compile Include="Steps\Login\IncorrectUserNameSteps.cs" />
     <Compile Include="Steps\ESubSearchSteps.cs" />
-    <Compile Include="Features\eSubSearch.feature.cs">
+    <Compile Include="Features\eSub Search\eSubSearch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>eSubSearch.feature</DependentUpon>
@@ -153,10 +149,11 @@
     <Compile Include="Steps\Projects\Filter By\ProjectNavigationSteps.cs" />
     <Compile Include="Steps\Projects\Filter By\StatusSteps.cs" />
     <Compile Include="Steps\Projects\Project Summary\ProjectManagementMenuDropdownSteps.cs" />
+    <Compile Include="Steps\Timesheet\FilterByEmployee.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\eSubSearch.feature">
+    <None Include="Features\eSub Search\eSubSearch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>eSubSearch.feature.cs</LastGenOutput>
     </None>
@@ -200,17 +197,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ProjectSwitch.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\TimeFilter.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>TimeFilter.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\Timesheet\Filter By Project.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Filter By Project.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\UserLogin.feature">
+    <None Include="Features\Login\UserLogin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>UserLogin.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Timesheet\FilterByEmployee.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FilterByEmployee.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

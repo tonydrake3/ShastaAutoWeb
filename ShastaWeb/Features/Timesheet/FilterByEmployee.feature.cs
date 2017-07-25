@@ -18,8 +18,8 @@ namespace eSUBTests.Features.Timesheet
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Filter By Project")]
-    public partial class FilterByProjectFeature
+    [NUnit.Framework.DescriptionAttribute("FilterByEmployee")]
+    public partial class FilterByEmployeeFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,8 @@ namespace eSUBTests.Features.Timesheet
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Filter By Project", "\tTo filter by Project or Employee\r\n\tTo begin, we\'ll fitler by Employee", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FilterByEmployee", "\tIn order to filter by Employee to see their timecard\r\n\tThe Project Manager must " +
+                    "view timesheet and expenses ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,28 +65,23 @@ namespace eSUBTests.Features.Timesheet
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Filter By Employee")]
-        [NUnit.Framework.CategoryAttribute("FilterByTime")]
+        [NUnit.Framework.DescriptionAttribute("Filter by Employee")]
+        [NUnit.Framework.CategoryAttribute("TimeSheet")]
         [NUnit.Framework.CategoryAttribute("FunctionalTests")]
         public virtual void FilterByEmployee()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter By Employee", new string[] {
-                        "FilterByTime",
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter by Employee", new string[] {
+                        "TimeSheet",
                         "FunctionalTests"});
-#line 8
+#line 7
 this.ScenarioSetup(scenarioInfo);
+#line 8
+ testRunner.Given("a Project Manager is logged into Shasta,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+ testRunner.When("the Project Manager Selects on the Time & Expense Dropdown Icon,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Given("the Project Manager is logged into Shasta,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
- testRunner.When("the Project Manager expands the Time & Expense option on the left sidebar menu by" +
-                    " clicking on the dropdown icon,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
- testRunner.Then("selects the Employee filter in the upper right corner,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 13
- testRunner.Then("the Timesheets view is displayed via the employee,", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
- testRunner.And("the Timesheets view shall contain Timecards with hours associated with the select" +
-                    "ed Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("selects timesheets, the default filter is grouped by Employee and the timecards a" +
+                    "re displayed in full", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
